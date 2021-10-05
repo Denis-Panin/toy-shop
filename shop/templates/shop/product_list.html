@@ -1,0 +1,44 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} Главная {% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <img class="img-fluid" width="100%" src="{% static 'images/toy-shop.jpg' %}" alt="">
+    </div>
+</div>
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col=10 mx-auto my-2 text-center">
+                <h1 class="text-capitalize font-weigth-bold">
+                    Наши товары
+                </h1>
+                <h2 class="text-center ">Колличества товаров в наличии: {{ cnt }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-9 mx-auto com-md-6 col-lg-3">
+            <div class="card mb-5">
+                <div class="p-4">
+                    <a href="{{ product.get_url }}"><img class="card-img-top" src="{{ product.image.url }}"
+                                                         alt="{{ product.name }}"></a>
+                </div>
+                <div class="card-footer d-flex justify-content-between" style="background: transparent: border-color:
+                transparent">
+                    <p class="font--weight-bold mb-0">
+                        {{ product.name }}
+                    </p>
+                    <h5 class="text-info font-italic mb-0">{{ product.price }} грн.</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

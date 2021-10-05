@@ -1,0 +1,98 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} Корзина {% endblock %}
+{% block content %}
+
+{% if not cart_items %}
+<div class="text-center">
+    <br>
+    <h1 class="text-center product_title">
+        Ваша корзина пуста
+    </h1>
+    <br>
+    <p class="text-center">
+        Нажмите <a href="{% url 'home_page' %}">здесь</a> чтобы вернуться к товарам
+    </p>
+</div>
+{% else %}
+<div class="text-center">
+    <br>
+    <div class="text-center product_title">
+        КОРЗИНА ПОКУПАТЕЛЯ
+    </div>
+</div>
+<div class="row mx-auto">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+        <table class="table cart-table">
+            <thead class="cart-thead">
+            <tr>
+                <th colspan="4">
+                    Ваши товары
+                </th>
+            </tr>
+            </thead>
+            {% for cart_item in cart_items %}
+            <tr>
+                <td>
+                    <a href="{{cart_item.product.get_url}}"><img src="{{ cart_item.product.image.url}}" width="100"
+                                                                 height="100" alt=""></a>
+                </td>
+                <td class="text-left">
+                    Наименование товара: {{ cart_item.product.name }}
+                    <br>
+                    Цена за единицу: {{ cart_item.product.price }} грн.
+                    <br>
+                    Количество: {{ cart_item.quantity }} x {{ cart_item.product.price }} грн.
+                </td>
+                <td>
+                    {{ cart_item.sub_total }} грн.
+                </td>
+                {% if cart_item.quantity < cart_item.product.stock %}
+                <td>
+                    <a href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus cart-icon"></i></a>
+                    <a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus cart-icon"></i></a>
+                    <a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt"></i></a>
+                </td>
+                {% else %}
+                <td>
+                    <a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus cart-icon"></i></a>
+                    <a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt"></i></a>
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+        <table class="table cart-table">
+            <thead class="cart-thead">
+            <tr>
+                <th colspan="4">
+                    Касса
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Пожалуйста, проверьте вашу карту перед оплатой..
+                </td>
+            </tr>
+            <tr class="text-left">
+                <td>
+                    Ваш общий счет: <strong> {{ total }} грн.</strong>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="mx-auto">
+            <a href="{% url 'home_page' %}" style="text-decoration: none;">
+                <button type="button" class="btn btn-lg btn-block bg-dark text-white">
+                    Вернуться к товарам
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
