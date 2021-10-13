@@ -1,8 +1,10 @@
 <h1 align="center"> The name is project "toy-shop-project" </h1>
 
-![sport_blog](C:\Users\pc\Pictures\Screenshots)
-![sport_blog2](https://user-images.githubusercontent.com/80538140/126048536-fdb23fef-50e1-4b41-a8b0-ada47e3764af.png)
-![sport_blog3 png](https://user-images.githubusercontent.com/80538140/126048541-61899335-e5e4-41a7-9cc0-fdfb5ba23e19.png)
+![Снимок экрана (3)](https://user-images.githubusercontent.com/91189823/137213378-d3d233a2-41d0-41f5-b72a-5b73efa52091.png)
+![Снимок экрана (4)](https://user-images.githubusercontent.com/80538140/137213618-a79a376a-1972-474a-a47e-1d36c988be73.png)
+![Снимок экрана (5)](https://user-images.githubusercontent.com/80538140/137213705-22c0c6af-8e68-47aa-9750-51a0b39e679d.png)
+![Снимок экрана (7)](https://user-images.githubusercontent.com/80538140/137213741-ee620de7-ca76-484d-afd8-4713cbec6a7f.png)
+
 
 
 
