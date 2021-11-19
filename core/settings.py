@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'debug_toolbar',
     'django_filters',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
