@@ -1,13 +1,13 @@
 MANAGE = python manage.py
 
 run:
-	 $(MANAGE) runserver
+	 cd src && $(MANAGE) runserver
 
 new-migrate:
-	$(MANAGE) makemigrations
+	cd src && $(MANAGE) makemigrations
 
 migrate:
-	$(MANAGE) migrate
+	cd src && $(MANAGE) migrate
 
 lint:
 	flake8 ./src
