@@ -1,7 +1,7 @@
 MANAGE = python manage.py
 
 run:
-	 cd src && $(MANAGE) runserver
+	 cd src && $(MANAGE) runserver 0.0.0.0:8000
 
 new-migrate:
 	cd src && $(MANAGE) makemigrations
