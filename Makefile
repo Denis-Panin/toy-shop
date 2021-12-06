@@ -9,6 +9,9 @@ new-migrate:
 migrate:
 	cd src && $(MANAGE) migrate
 
+user:
+	cd src && $(MANAGE) createsuperuser
+	
 lint:
 	flake8 ./src
 
