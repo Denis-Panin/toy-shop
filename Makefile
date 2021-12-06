@@ -9,6 +9,9 @@ mm:
 m:
 	cd src && $(MANAGE) migrate
 
+static:
+	cd src && $(MANAGE) collectstatic
+
 user:
 	cd src && $(MANAGE) createsuperuser
 	
