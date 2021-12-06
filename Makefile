@@ -3,10 +3,10 @@ MANAGE = python manage.py
 run:
 	 cd src && $(MANAGE) runserver 0.0.0.0:8000
 
-new-migrate:
+mm:
 	cd src && $(MANAGE) makemigrations
 
-migrate:
+m:
 	cd src && $(MANAGE) migrate
 
 user:
