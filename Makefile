@@ -25,7 +25,7 @@ check-migrate:
 	$(MANAGE) --check --dry-run
 
 shell_plus:
-	$(MANAGE) shell_plus --print-sql
+	cd src && $(MANAGE) shell_plus --print-sql
 
 celery:
 	 cd src && celery -A core worker -l info
