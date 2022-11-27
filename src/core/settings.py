@@ -1,11 +1,12 @@
 import os.path
+from dotenv import load_dotenv
 from pathlib import Path
 
+load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-or%y5=n=t%=t9o+nuxkm9s#r8)^z945if-jjx-!16+z%7m2#xb'
-
-DEBUG = True
+SECRET_KEY = os.getenv('SECRET_KEY')
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['134.209.248.27', '0.0.0.0']
 
