@@ -1,4 +1,4 @@
-<h1 align="center"> The name is project "toy-shop-project" </h1>
+<h1 align="center"> The name is project "toy-shop" </h1>
 
 ![Снимок экрана (3)](https://user-images.githubusercontent.com/91189823/137213378-d3d233a2-41d0-41f5-b72a-5b73efa52091.png)
 ![Снимок экрана (8)](https://user-images.githubusercontent.com/80538140/137214163-15b0bef0-8752-4d71-8a18-1f5e34eb68f3.png)
