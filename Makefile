@@ -10,10 +10,10 @@ m:
 	$(MANAGE) migrate
 
 static:
-	(MANAGE) collectstatic
+	$(MANAGE) collectstatic
 
 user:
-	(MANAGE) createsuperuser
+	$(MANAGE) createsuperuser
 	
 lint:
 	flake8 ./src
