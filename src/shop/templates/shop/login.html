@@ -1,9 +1,7 @@
 {% extends 'shop/base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 {% block title %} Авторизация {% endblock %}
 {% block content %}
-
 <div class="container">
     <br>
     <h1 class="product_title text-center">Войдите или создайте новую учетную запись</h1>
@@ -24,7 +22,7 @@
                 </h2>
                 <form method="post">
                     {% csrf_token%}
-                    <p>{{ form | crispy }}</p>
+                    <p>{{ form }}</p>
                     <button type="submit" class="btn btn-secondary">
                         Вход
                     </button>
@@ -33,5 +31,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
